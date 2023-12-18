@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "4bcc309c-5852-483a-bfe4-6a40dbda6b6b",
+		"name": "SubscriptionApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19915959"
+	},
+	"item": [
+		{
+			"name": "SubRequest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "af2085fb-02d1-3546-86ce-d4dc47e27e85"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/sub?msisdn=923223570278",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"sub"
+					],
+					"query": [
+						{
+							"key": "msisdn",
+							"value": "923223570278"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TokenGeneration",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "yboSQsR6fQkiP4T86B4sfTo2dCUa",
+						"username": "rRdrnaJspjJVsY45HFqhr0a_LuQa"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://apimtest.jazz.com.pk:8282/token"
+			},
+			"response": []
+		}
+	]
+}
